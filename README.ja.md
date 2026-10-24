@@ -154,7 +154,7 @@ uv run python -m color2gds simulate runs/my_soi/image.gds \
 
 ## 引用
 
-研究で利用する場合は [CITATION.cff](CITATION.cff) の情報で引用してください。GitHubでは「Cite this repository」ボタンから引用形式を取得できます。
+研究で利用する場合は [CITATION.cff](CITATION.cff) の情報で引用してください。GitHubページ右側のAbout欄にある「Cite this repository」からも引用形式を取得できます。
 
 ## ライセンス
 

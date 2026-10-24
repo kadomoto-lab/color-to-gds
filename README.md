@@ -158,7 +158,7 @@ Bug reports, questions and pull requests are welcome. See [CONTRIBUTING.md](CONT
 
 ## Citation
 
-If you use Color2GDS in academic work, please cite it using [CITATION.cff](CITATION.cff). GitHub shows a "Cite this repository" button for it.
+If you use Color2GDS in academic work, please cite it using [CITATION.cff](CITATION.cff). You can also use the "Cite this repository" link in the About section on the right of the GitHub page.
 
 ## License
 
