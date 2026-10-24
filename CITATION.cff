@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use Color2GDS in your research, please cite it as below."
+title: "Color2GDS: an image-to-GDSII compiler for structural color on CMOS metal layers"
+type: software
+authors:
+  - family-names: Kadomoto
+    given-names: Junichiro
+    affiliation: "The University of Tokyo"
+version: 0.1.0
+license: MIT
+keywords:
+  - structural color
+  - GDSII
+  - RCWA
+  - SKY130
+  - layout generation
+repository-code: "https://github.com/kadomoto-lab/color-to-gds"
+url: "https://github.com/kadomoto-lab/color-to-gds"

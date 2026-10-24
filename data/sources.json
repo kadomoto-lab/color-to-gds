@@ -1,0 +1,10 @@
+{
+  "Al": {
+    "url": "https://raw.githubusercontent.com/polyanskiy/refractiveindex.info-database/master/database/data/main/Al/nk/Rakic.yml",
+    "sha256": "e93b31fe821551836e5b000949c67c633b8a1ca1f2c5549f4db0f1c03b24844d"
+  },
+  "Si": {
+    "url": "https://raw.githubusercontent.com/polyanskiy/refractiveindex.info-database/master/database/data/main/Si/nk/Green-2008.yml",
+    "sha256": "4b785ec47ca9a5ac71626dc90194115fba00575689a52c2baf1e78676c752ce4"
+  }
+}

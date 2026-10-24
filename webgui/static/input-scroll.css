@@ -1,0 +1,1 @@
+@media(min-width:651px){.inputs{position:sticky;top:20px}.inputs form{display:flex;flex-direction:column;max-height:calc(100vh - 70px)}.inputs .panel-heading,.run-actions{flex-shrink:0}.input-fields{overflow:auto;scrollbar-width:thin;scrollbar-color:#c5d6cb transparent;max-height:calc(100vh - 425px);min-height:340px}.run-actions{border-top:1px solid var(--line)}}

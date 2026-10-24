@@ -1,0 +1,19 @@
+schema_version: 1
+name: "Si / Al 100 nm / SiO2 200 nm (top layer patterned)"
+units: um
+gds: {layer: 1, datatype: 0, fixed_layer: false}
+rules: {grid_um: 0.005, min_width_um: 0.14, min_space_um: 0.14, min_area_um2: 0.02}
+materials: {}
+# Incident side first; the name lists layers from the Si substrate upward.
+layers:
+  - {material: air, thickness_um: 0}
+  - {material: SiO2, thickness_um: 0.200, patterned: true, background: air}
+  - {material: Al, thickness_um: 0.100}
+  - {material: Si, thickness_um: 0}
+assumptions:
+  - Only the top 200 nm film is patterned; gaps are air and lower films are continuous.
+  - Semi-infinite Si substrate; adhesion layers and native oxides are omitted.
+  - Design rules are comparison defaults copied from soi_al, not process-qualified limits.
+sources:
+  - https://doi.org/10.1364/AO.34.004755
+  - https://doi.org/10.1016/j.solmat.2008.06.009

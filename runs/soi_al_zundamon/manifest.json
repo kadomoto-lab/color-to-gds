@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "stack": {
+    "schema_version": 1,
+    "name": "SOI_Al100_Si220_BOX2000",
+    "units": "um",
+    "gds": {
+      "layer": 1,
+      "datatype": 0,
+      "fixed_layer": false
+    },
+    "rules": {
+      "grid_um": 0.005,
+      "min_width_um": 0.14,
+      "min_space_um": 0.14,
+      "min_area_um2": 0.02
+    },
+    "materials": {},
+    "layers": [
+      {
+        "material": "air",
+        "thickness_um": 0
+      },
+      {
+        "material": "Al",
+        "thickness_um": 0.1,
+        "patterned": true,
+        "background": "air"
+      },
+      {
+        "material": "Si",
+        "thickness_um": 0.22
+      },
+      {
+        "material": "SiO2",
+        "thickness_um": 2.0
+      },
+      {
+        "material": "Si",
+        "thickness_um": 0
+      }
+    ],
+    "assumptions": [
+      "Case-study dimensions, not a foundry PDK or a specified fabricated SOI wafer.",
+      "Al grating is directly on crystalline Si; no adhesion layer or native oxide.",
+      "Al 100 nm, device silicon 220 nm and BOX 2 um must be replaced with actual film values."
+    ],
+    "sources": [
+      "https://doi.org/10.1364/AO.34.004755",
+      "https://doi.org/10.1016/j.solmat.2008.06.009"
+    ]
+  },
+  "settings": {
+    "step_nm": 1.0,
+    "modes": 31,
+    "theta": 0.0,
+    "pixel_size_um": 7.815
+  },
+  "grid": [
+    128,
+    262
+  ],
+  "pixel_size_um": 7.815,
+  "min_width_um": 0.14,
+  "min_space_um": 0.14,
+  "gds_layer": 1,
+  "gds_datatype": 0,
+  "mapping": "color",
+  "source_sha256": "6d875d7b035ba600245562c9db4141f6d1a418bf3f67d0675b6a3cce23f7d916",
+  "opaque_pixels_allow_blank": false,
+  "optimization_history": [
+    {
+      "round": 0,
+      "candidate_count": 22,
+      "mean_deltaE76_mapping_target": 27.500630084104596
+    },
+    {
+      "round": 1,
+      "candidate_count": 27,
+      "mean_deltaE76_mapping_target": 27.351083344885858
+    }
+  ]
+}

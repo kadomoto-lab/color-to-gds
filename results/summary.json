@@ -1,0 +1,242 @@
+{
+  "cells": 138,
+  "modes": 31,
+  "wavelength_points": 401,
+  "min_absorption_above_substrate": 0.013974429006165467,
+  "max_Rtotal_plus_T": 0.9681735916251826,
+  "max_chroma": 28.731621811940816,
+  "min_Y": 0.24540754612701604,
+  "max_Y": 0.7441249610912761,
+  "out_of_srgb_count": 0,
+  "flat_m1_color": {
+    "XYZ": [
+      0.8384741769926887,
+      0.8828334213679044,
+      0.9720578897634947
+    ],
+    "Lab": [
+      95.28011808765686,
+      -0.11818244909905795,
+      -0.7026009816629708
+    ],
+    "xy": [
+      0.31131095303990125,
+      0.3277807728882694
+    ],
+    "rgb": [
+      0.943094850193856,
+      0.9471507688567192,
+      0.9519099469447537
+    ],
+    "out_of_srgb": false
+  },
+  "convergence": [
+    {
+      "id": "m1_grating_p360_w220",
+      "comparison": "31 vs 71",
+      "deltaE00": 0.029650608810547915,
+      "max_R0_diff": 0.0027890222735601766
+    },
+    {
+      "id": "m1_grating_p360_w220",
+      "comparison": "51 vs 71",
+      "deltaE00": 0.00839270808092848,
+      "max_R0_diff": 0.0005072504455229665
+    },
+    {
+      "id": "m2_grating_p360_w220",
+      "comparison": "31 vs 71",
+      "deltaE00": 0.02486409610076011,
+      "max_R0_diff": 0.003311669254920102
+    },
+    {
+      "id": "m2_grating_p360_w220",
+      "comparison": "51 vs 71",
+      "deltaE00": 0.006113676715360399,
+      "max_R0_diff": 0.0005561869069830028
+    },
+    {
+      "id": "m2_m1_mirror_p280_w140",
+      "comparison": "31 vs 71",
+      "deltaE00": 0.029359586383670006,
+      "max_R0_diff": 0.002481168562238678
+    },
+    {
+      "id": "m2_m1_mirror_p280_w140",
+      "comparison": "51 vs 71",
+      "deltaE00": 0.01416873719288892,
+      "max_R0_diff": 0.0011074203247690706
+    }
+  ],
+  "sensitivity": [
+    {
+      "id": "m1_grating_p360_w220",
+      "variant": "modes_51",
+      "deltaE00": 0.0
+    },
+    {
+      "id": "m1_grating_p360_w220",
+      "variant": "angle_5",
+      "deltaE00": 6.26167188411152
+    },
+    {
+      "id": "m1_grating_p360_w220",
+      "variant": "angle_15",
+      "deltaE00": 10.409769643035709
+    },
+    {
+      "id": "m1_grating_p360_w220",
+      "variant": "angle_30",
+      "deltaE00": 7.110777834289903
+    },
+    {
+      "id": "m1_grating_p360_w220",
+      "variant": "cap_4.255",
+      "deltaE00": 1.88142261958604
+    },
+    {
+      "id": "m1_grating_p360_w220",
+      "variant": "cap_4.455",
+      "deltaE00": 4.059446261741151
+    },
+    {
+      "id": "m1_grating_p360_w220",
+      "variant": "polyimide",
+      "deltaE00": 1.5238312725697098
+    },
+    {
+      "id": "m1_grating_p360_w220",
+      "variant": "metal_340",
+      "deltaE00": 1.8433210320470979
+    },
+    {
+      "id": "m1_grating_p360_w220",
+      "variant": "metal_380",
+      "deltaE00": 1.5856313719090704
+    },
+    {
+      "id": "m1_grating_p360_w220",
+      "variant": "gap_250",
+      "deltaE00": 0.3549442159343487
+    },
+    {
+      "id": "m1_grating_p360_w220",
+      "variant": "gap_290",
+      "deltaE00": 0.4341332257810219
+    },
+    {
+      "id": "m2_grating_p360_w220",
+      "variant": "modes_51",
+      "deltaE00": 0.0
+    },
+    {
+      "id": "m2_grating_p360_w220",
+      "variant": "angle_5",
+      "deltaE00": 7.128417242277708
+    },
+    {
+      "id": "m2_grating_p360_w220",
+      "variant": "angle_15",
+      "deltaE00": 7.896421673112865
+    },
+    {
+      "id": "m2_grating_p360_w220",
+      "variant": "angle_30",
+      "deltaE00": 8.254815774406225
+    },
+    {
+      "id": "m2_grating_p360_w220",
+      "variant": "cap_4.255",
+      "deltaE00": 0.7921377325217853
+    },
+    {
+      "id": "m2_grating_p360_w220",
+      "variant": "cap_4.455",
+      "deltaE00": 1.5138757397890947
+    },
+    {
+      "id": "m2_grating_p360_w220",
+      "variant": "polyimide",
+      "deltaE00": 2.9405033371826126
+    },
+    {
+      "id": "m2_grating_p360_w220",
+      "variant": "metal_340",
+      "deltaE00": 2.074128107556588
+    },
+    {
+      "id": "m2_grating_p360_w220",
+      "variant": "metal_380",
+      "deltaE00": 2.3801820725943656
+    },
+    {
+      "id": "m2_grating_p360_w220",
+      "variant": "gap_250",
+      "deltaE00": 0.5673913084566401
+    },
+    {
+      "id": "m2_grating_p360_w220",
+      "variant": "gap_290",
+      "deltaE00": 0.5274875377720547
+    },
+    {
+      "id": "m2_m1_mirror_p280_w140",
+      "variant": "modes_51",
+      "deltaE00": 0.0
+    },
+    {
+      "id": "m2_m1_mirror_p280_w140",
+      "variant": "angle_5",
+      "deltaE00": 1.5988870055271422
+    },
+    {
+      "id": "m2_m1_mirror_p280_w140",
+      "variant": "angle_15",
+      "deltaE00": 0.650667201399082
+    },
+    {
+      "id": "m2_m1_mirror_p280_w140",
+      "variant": "angle_30",
+      "deltaE00": 5.873728146316227
+    },
+    {
+      "id": "m2_m1_mirror_p280_w140",
+      "variant": "cap_4.255",
+      "deltaE00": 0.7267247093520813
+    },
+    {
+      "id": "m2_m1_mirror_p280_w140",
+      "variant": "cap_4.455",
+      "deltaE00": 0.38124639185471737
+    },
+    {
+      "id": "m2_m1_mirror_p280_w140",
+      "variant": "polyimide",
+      "deltaE00": 1.6624098655680917
+    },
+    {
+      "id": "m2_m1_mirror_p280_w140",
+      "variant": "metal_340",
+      "deltaE00": 2.368487625288968
+    },
+    {
+      "id": "m2_m1_mirror_p280_w140",
+      "variant": "metal_380",
+      "deltaE00": 3.7409404453286537
+    },
+    {
+      "id": "m2_m1_mirror_p280_w140",
+      "variant": "gap_250",
+      "deltaE00": 0.8598832450485816
+    },
+    {
+      "id": "m2_m1_mirror_p280_w140",
+      "variant": "gap_290",
+      "deltaE00": 1.2470917783269209
+    }
+  ],
+  "spectral_refinement": {
+    "step_nm": 1.0,
+    "max_deltaE00_vs_5nm": 9.699829191696134
+  }
+}

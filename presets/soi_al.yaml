@@ -1,0 +1,19 @@
+schema_version: 1
+name: SOI_Al100_Si220_BOX2000
+units: um
+gds: {layer: 1, datatype: 0, fixed_layer: false}
+rules: {grid_um: 0.005, min_width_um: 0.14, min_space_um: 0.14, min_area_um2: 0.02}
+materials: {}
+layers:
+  - {material: air, thickness_um: 0}
+  - {material: Al, thickness_um: 0.100, patterned: true, background: air}
+  - {material: Si, thickness_um: 0.220}
+  - {material: SiO2, thickness_um: 2.000}
+  - {material: Si, thickness_um: 0}
+assumptions:
+  - Case-study dimensions, not a foundry PDK or a specified fabricated SOI wafer.
+  - Al grating is directly on crystalline Si; no adhesion layer or native oxide.
+  - Al 100 nm, device silicon 220 nm and BOX 2 um must be replaced with actual film values.
+sources:
+  - https://doi.org/10.1364/AO.34.004755
+  - https://doi.org/10.1016/j.solmat.2008.06.009

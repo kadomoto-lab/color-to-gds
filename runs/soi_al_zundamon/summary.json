@@ -1,0 +1,224 @@
+{
+  "stack": "SOI_Al100_Si220_BOX2000",
+  "canvas_um": [
+    1000.32,
+    2047.53
+  ],
+  "pixel_grid": [
+    128,
+    262
+  ],
+  "foreground_pixels": 15776,
+  "elapsed_seconds": 30.812283515930176,
+  "mean_deltaE00_source": 16.25804708077972,
+  "median_deltaE00_source": 15.404788597949072,
+  "closed_loop_max_Lab_difference": 0.0,
+  "optimization_history": [
+    {
+      "round": 0,
+      "candidate_count": 22,
+      "mean_deltaE76_mapping_target": 27.500630084104596
+    },
+    {
+      "round": 1,
+      "candidate_count": 27,
+      "mean_deltaE76_mapping_target": 27.351083344885858
+    }
+  ],
+  "readback": {
+    "gds_sha256": "61fea8938a673a8eb340481d5460df2907add306b127a0f18e56f6628be34681",
+    "unique_drawn_cells": 21,
+    "references": 15776,
+    "verified": [
+      "rectangles",
+      "layer/datatype",
+      "width",
+      "spacing",
+      "minimum area",
+      "grid",
+      "boundary keepout",
+      "pixel placement"
+    ],
+    "global_density_and_foundry_signoff": "not covered by geometry checks",
+    "geometries": [
+      {
+        "pitch": 0.56,
+        "width": 0.145,
+        "count": 12,
+        "length": 7.255,
+        "x0": 0.755,
+        "y0": 0.28
+      },
+      {
+        "pitch": 0.49,
+        "width": 0.145,
+        "count": 14,
+        "length": 7.255,
+        "x0": 0.65,
+        "y0": 0.28
+      },
+      {
+        "pitch": 0.8,
+        "width": 0.4,
+        "count": 9,
+        "length": 7.255,
+        "x0": 0.51,
+        "y0": 0.28
+      },
+      {
+        "pitch": 0.675,
+        "width": 0.14,
+        "count": 10,
+        "length": 7.255,
+        "x0": 0.8,
+        "y0": 0.28
+      },
+      {
+        "pitch": 0.49,
+        "width": 0.35,
+        "count": 14,
+        "length": 7.255,
+        "x0": 0.55,
+        "y0": 0.28
+      },
+      {
+        "pitch": 0.56,
+        "width": 0.42,
+        "count": 12,
+        "length": 7.255,
+        "x0": 0.615,
+        "y0": 0.28
+      },
+      {
+        "pitch": 0.56,
+        "width": 0.415,
+        "count": 12,
+        "length": 7.255,
+        "x0": 0.62,
+        "y0": 0.28
+      },
+      {
+        "pitch": 0.49,
+        "width": 0.24,
+        "count": 14,
+        "length": 7.255,
+        "x0": 0.605,
+        "y0": 0.28
+      },
+      {
+        "pitch": 0.49,
+        "width": 0.25,
+        "count": 14,
+        "length": 7.255,
+        "x0": 0.6,
+        "y0": 0.28
+      },
+      {
+        "pitch": 0.56,
+        "width": 0.14,
+        "count": 12,
+        "length": 7.255,
+        "x0": 0.755,
+        "y0": 0.28
+      },
+      {
+        "pitch": 0.56,
+        "width": 0.28,
+        "count": 12,
+        "length": 7.255,
+        "x0": 0.685,
+        "y0": 0.28
+      },
+      {
+        "pitch": 0.675,
+        "width": 0.535,
+        "count": 10,
+        "length": 7.255,
+        "x0": 0.605,
+        "y0": 0.28
+      },
+      {
+        "pitch": 0.8,
+        "width": 0.14,
+        "count": 9,
+        "length": 7.255,
+        "x0": 0.64,
+        "y0": 0.28
+      },
+      {
+        "pitch": 0.365,
+        "width": 0.14,
+        "count": 19,
+        "length": 7.255,
+        "x0": 0.555,
+        "y0": 0.28
+      },
+      {
+        "pitch": 0.42,
+        "width": 0.14,
+        "count": 17,
+        "length": 7.255,
+        "x0": 0.48,
+        "y0": 0.28
+      },
+      {
+        "pitch": 0.28,
+        "width": 0.14,
+        "count": 25,
+        "length": 7.255,
+        "x0": 0.475,
+        "y0": 0.28
+      },
+      {
+        "pitch": 0.325,
+        "width": 0.14,
+        "count": 22,
+        "length": 7.255,
+        "x0": 0.425,
+        "y0": 0.28
+      },
+      {
+        "pitch": 0.42,
+        "width": 0.21,
+        "count": 17,
+        "length": 7.255,
+        "x0": 0.445,
+        "y0": 0.28
+      },
+      {
+        "pitch": 0.8,
+        "width": 0.66,
+        "count": 9,
+        "length": 7.255,
+        "x0": 0.38,
+        "y0": 0.28
+      },
+      {
+        "pitch": 0.325,
+        "width": 0.185,
+        "count": 22,
+        "length": 7.255,
+        "x0": 0.4,
+        "y0": 0.28
+      },
+      {
+        "pitch": 0.49,
+        "width": 0.245,
+        "count": 14,
+        "length": 7.255,
+        "x0": 0.6,
+        "y0": 0.28
+      }
+    ]
+  },
+  "assumptions": [
+    "Case-study dimensions, not a foundry PDK or a specified fabricated SOI wafer.",
+    "Al grating is directly on crystalline Si; no adhesion layer or native oxide.",
+    "Al 100 nm, device silicon 220 nm and BOX 2 um must be replaced with actual film values."
+  ],
+  "limitations": [
+    "Infinite 1D periodic local solver; finite-pixel edges and neighboring-cell coupling omitted",
+    "Active region and guard region combined as an incoherent area average",
+    "No foundry signoff; density/fill/antenna and actual optical constants need process integration"
+  ]
+}

@@ -1,0 +1,36 @@
+[project]
+name = "color2gds"
+version = "0.1.0"
+description = "Compile images into structural-color GDSII layouts for CMOS metal layers, with RCWA-predicted appearance"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Junichiro Kadomoto" }]
+requires-python = ">=3.10"
+dependencies = [
+    "colour-science>=0.4.6",
+    "gdstk>=1.0.1",
+    "grcwa>=0.1.2",
+    "matplotlib>=3.10.9",
+    "numpy>=2.2.6",
+    "pillow>=12.3.0",
+    "pyyaml>=6.0.3",
+    "scipy>=1.15.3",
+    # Web GUI
+    "fastapi>=0.141.1",
+    "python-multipart>=0.0.32",
+    "uvicorn>=0.53.0",
+]
+
+[project.urls]
+Repository = "https://github.com/kadomoto-lab/color-to-gds"
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.1.1",
+]
+
+[tool.uv]
+# An application run from the repository root, not an installable package.
+package = false

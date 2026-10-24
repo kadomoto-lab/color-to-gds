@@ -1,0 +1,25 @@
+{
+  "compiler_sources": {
+    "color2gds/__init__.py": "745b922f8a4d4f0662dc0619b7ddd87cdde9e95974c0b7666ffa0aa91e55cae8",
+    "color2gds/__main__.py": "00513a28987b28ab34e1cde9b1496b3b03766d337a247abe82742950c5e05964",
+    "color2gds/compiler.py": "31f5ecf1188f32eefa352167caf90118e756bdeb4851f75c3c8c35bdc0b50eb0",
+    "color2gds/layout.py": "f8ba0ff50f5d6f0fea6ed96d13965f9281df1818e59c0c4bb34368c03b728cc9",
+    "color2gds/model.py": "7b3e1b0e9a3995e8f0a7c2ac534ff48dd14b1bb8fd331809fa048499ed8631a4",
+    "color2gds/palette.py": "f17167174b0c1d86466808d2aeb85a01f5769d50632a5ed18fdbcaa07e2c515f",
+    "presets/si_al85_sio2_165_pattern.yaml": "e050e429a1a42d7495b3276b5ab37c20e3dc76bc3392b568483b1c9dccb9befc",
+    "presets/si_al_sio2_200_pattern.yaml": "30bef25c24eeb0f245a0635042d3de59f73e7aa36cb71270ed3a9413f449d2ae",
+    "presets/si_al_sio2_al_pattern.yaml": "66f35cbb405b9196aac32c5a2239dcabeba4ee916b0b20bf685687d436f6a176",
+    "presets/si_al_sio2_pattern.yaml": "5b62e693c29c5707f8ef483872723d7015401fc7ee22f06e7cecf2930f9338df",
+    "presets/si_sio2_73_al85_pattern.yaml": "5c782b1099fd04dc249400d692f60300d779d1fd95c37e9e7938d02bb337c753",
+    "presets/si_sio2_al_pattern.yaml": "1d77f93ed4d1de4390b0cff7d5ccbc8464b4d3b06c95b7e38ef3319ea7ce58a0",
+    "presets/si_sio2_al_sio2_pattern.yaml": "24d447e016a68a01fdb74c989b0374c58828ee8c49b8cd070472610dfb4e95c9",
+    "presets/sky130.yaml": "eebd878862f897a467b86059b220624dbae2ad7c8a0a738c0b7b3bd0406ea54b",
+    "presets/soi_al.yaml": "6b4b3ac9c04ecc9024b1f827702ed44748384bd46a5c2a549779205526b06e1a"
+  },
+  "input_sha256": {
+    "zundamon": "6d875d7b035ba600245562c9db4141f6d1a418bf3f67d0675b6a3cce23f7d916",
+    "metan": "8393272d7a3fcff43f5e9043b84a4260efa91a759ca1af6e7351bf6158d68578"
+  },
+  "pdk_version": "bdc9412b3e468c102d01b7cf6337be06ec6e9c9a",
+  "magic_version": "8.3.678"
+}

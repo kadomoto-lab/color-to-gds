@@ -1,0 +1,28 @@
+schema_version: 1
+name: SKY130_Met1_exploratory
+units: um
+gds: {layer: 68, datatype: 20, fixed_layer: true}
+rules: {grid_um: 0.005, min_width_um: 0.14, min_space_um: 0.14, min_area_um2: 0.083}
+materials:
+  PI: {n: 1.65, k: 0.0}
+# Top to bottom. Undrawn upper metal volumes approximated as oxide.
+# TiN cap is a hypothesis, not a foundry-confirmed interpretation of NILD3_C.
+layers:
+  - {material: air, thickness_um: 0}
+  - {material: PI, thickness_um: 4.7846}
+  - {material: Si3N4, thickness_um: 0.3777}
+  - {material: SiO2, thickness_um: 4.985}
+  - {material: TiN, thickness_um: 0.030, patterned: true, background: SiO2}
+  - {material: Al, thickness_um: 0.330, patterned: true, background: SiO2}
+  - {material: SiO2, thickness_um: 0.365}
+  - {material: Si3N4, thickness_um: 0.075}
+  - {material: SiO2, thickness_um: 0.9361}
+  - {material: Si, thickness_um: 0}
+assumptions:
+  - Public SKY130 nominal dimensions with planarization and empty M2-M5 approximations.
+  - The 30 nm TiN top cap and optical properties are hypotheses; the drawing labels NILD3_C, not an identified TiN liner.
+  - PI is lossless n=1.65; actual PI dispersion, absorption and metal alloy are not calibrated.
+  - Metal fill, finite edges, oxide cladding differences and measured topography are omitted.
+sources:
+  - https://skywater-pdk.readthedocs.io/en/main/rules/assumptions.html
+  - https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html

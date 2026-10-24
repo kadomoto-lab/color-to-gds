@@ -1,0 +1,3 @@
+Magic drc(full): density and antenna excluded
+Error categories: 0
+

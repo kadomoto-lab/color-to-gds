@@ -1,0 +1,186 @@
+{
+  "gds_sha256": "7c618d6754c21cd74e8e18e4e3640260f8b01903131a62e3c154659651d69f7a",
+  "unique_drawn_cells": 21,
+  "references": 19473,
+  "verified": [
+    "rectangles",
+    "layer/datatype",
+    "width",
+    "spacing",
+    "minimum area",
+    "grid",
+    "boundary keepout",
+    "pixel placement"
+  ],
+  "global_density_and_foundry_signoff": "not covered by geometry checks",
+  "geometries": [
+    {
+      "pitch": 0.56,
+      "width": 0.145,
+      "count": 12,
+      "length": 7.255,
+      "x0": 0.755,
+      "y0": 0.28
+    },
+    {
+      "pitch": 0.56,
+      "width": 0.14,
+      "count": 12,
+      "length": 7.255,
+      "x0": 0.755,
+      "y0": 0.28
+    },
+    {
+      "pitch": 0.42,
+      "width": 0.14,
+      "count": 17,
+      "length": 7.255,
+      "x0": 0.48,
+      "y0": 0.28
+    },
+    {
+      "pitch": 0.675,
+      "width": 0.535,
+      "count": 10,
+      "length": 7.255,
+      "x0": 0.605,
+      "y0": 0.28
+    },
+    {
+      "pitch": 0.365,
+      "width": 0.14,
+      "count": 19,
+      "length": 7.255,
+      "x0": 0.555,
+      "y0": 0.28
+    },
+    {
+      "pitch": 0.42,
+      "width": 0.205,
+      "count": 17,
+      "length": 7.255,
+      "x0": 0.445,
+      "y0": 0.28
+    },
+    {
+      "pitch": 0.8,
+      "width": 0.66,
+      "count": 9,
+      "length": 7.255,
+      "x0": 0.38,
+      "y0": 0.28
+    },
+    {
+      "pitch": 0.365,
+      "width": 0.225,
+      "count": 19,
+      "length": 7.255,
+      "x0": 0.51,
+      "y0": 0.28
+    },
+    {
+      "pitch": 0.42,
+      "width": 0.28,
+      "count": 17,
+      "length": 7.255,
+      "x0": 0.41,
+      "y0": 0.28
+    },
+    {
+      "pitch": 0.42,
+      "width": 0.275,
+      "count": 17,
+      "length": 7.255,
+      "x0": 0.41,
+      "y0": 0.28
+    },
+    {
+      "pitch": 0.28,
+      "width": 0.14,
+      "count": 25,
+      "length": 7.255,
+      "x0": 0.475,
+      "y0": 0.28
+    },
+    {
+      "pitch": 0.42,
+      "width": 0.21,
+      "count": 17,
+      "length": 7.255,
+      "x0": 0.445,
+      "y0": 0.28
+    },
+    {
+      "pitch": 0.42,
+      "width": 0.215,
+      "count": 17,
+      "length": 7.255,
+      "x0": 0.44,
+      "y0": 0.28
+    },
+    {
+      "pitch": 0.325,
+      "width": 0.185,
+      "count": 22,
+      "length": 7.255,
+      "x0": 0.4,
+      "y0": 0.28
+    },
+    {
+      "pitch": 0.56,
+      "width": 0.42,
+      "count": 12,
+      "length": 7.255,
+      "x0": 0.615,
+      "y0": 0.28
+    },
+    {
+      "pitch": 0.675,
+      "width": 0.53,
+      "count": 10,
+      "length": 7.255,
+      "x0": 0.605,
+      "y0": 0.28
+    },
+    {
+      "pitch": 0.56,
+      "width": 0.28,
+      "count": 12,
+      "length": 7.255,
+      "x0": 0.685,
+      "y0": 0.28
+    },
+    {
+      "pitch": 0.365,
+      "width": 0.185,
+      "count": 19,
+      "length": 7.255,
+      "x0": 0.53,
+      "y0": 0.28
+    },
+    {
+      "pitch": 0.675,
+      "width": 0.14,
+      "count": 10,
+      "length": 7.255,
+      "x0": 0.8,
+      "y0": 0.28
+    },
+    {
+      "pitch": 0.49,
+      "width": 0.35,
+      "count": 14,
+      "length": 7.255,
+      "x0": 0.55,
+      "y0": 0.28
+    },
+    {
+      "pitch": 0.8,
+      "width": 0.14,
+      "count": 9,
+      "length": 7.255,
+      "x0": 0.64,
+      "y0": 0.28
+    }
+  ]
+}
