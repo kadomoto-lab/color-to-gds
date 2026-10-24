@@ -141,7 +141,6 @@ uv run python -m color2gds simulate runs/my_soi/image.gds \
 | `data/` | 光学材料データと出典 |
 | `samples/` | サンプル入力画像 |
 | `runs/<積層>_<サンプル>/` | 保存済みケーススタディ |
-| `research/` | 初期のSKY130光学探索（[研究ノート](research/README.md)参照）。現行プリセットとは仮定が異なります |
 | `scripts/` | ケースレポート、DRC、保守用の補助スクリプト |
 | `tests/` | テスト |
 | `pyproject.toml` / `uv.lock` | uvで管理する依存関係 |

@@ -38,7 +38,6 @@ htmlcov/
 !/runs/verification_latest/*.py
 !/runs/verification_latest/*.md
 
-# research/results/ is the versioned historical research snapshot described in research/README.md.
 # Do not exclude data formats globally: NPZ/GDS/PNG/CSV/JSON are also sample assets.
 
 # Local environment settings (templates can be shared)

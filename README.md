@@ -145,7 +145,6 @@ More example stacks are in [`presets/`](presets/). The model supports isotropic 
 | `data/` | Optical material data and its sources |
 | `samples/` | Sample input images |
 | `runs/<stack>_<sample>/` | Stored case studies |
-| `research/` | Earlier SKY130 optical exploration (see [research notes](research/README.md)). Its assumptions differ from the current presets |
 | `scripts/` | Case report, DRC and maintenance helpers |
 | `tests/` | Tests |
 | `pyproject.toml`, `uv.lock` | Dependencies, managed with uv |
