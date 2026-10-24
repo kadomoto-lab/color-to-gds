@@ -72,7 +72,7 @@ Material data and fonts ship with the repository. On first launch the server dow
 4. Click **Compile**. When it finishes, the GDS viewer and the predicted image on the right update together.
 5. Zoom and pan the GDS, compare against the input, and download the outputs.
 
-By default the layout is 128 pixels wide at 7.815 µm per pixel, about 1 mm across. Results are written to `runs/web/<job-id>/output/`. See the [Web GUI guide](WEB_GUI.md) (Japanese) for limits, the job queue and viewer details.
+By default the layout is 128 pixels wide at 7.815 µm per pixel, about 1 mm across. Results are written to `runs/web/<job-id>/output/`. See the [Web GUI guide](docs/WEB_GUI.md) (Japanese) for limits, the job queue and viewer details.
 
 ## Command-line usage
 
@@ -92,7 +92,7 @@ uv run python -m color2gds simulate runs/my_soi/image.gds \
   --manifest runs/my_soi/manifest.json --out runs/my_soi_resim
 ```
 
-For every option, the stack schema and the NPZ layout, see the [compiler reference](COMPILER.md) (Japanese).
+For every option, the stack schema and the NPZ layout, see the [compiler reference](docs/COMPILER.md) (Japanese).
 
 ## Outputs
 
@@ -141,11 +141,13 @@ More example stacks are in [`presets/`](presets/). The model supports isotropic 
 | `color2gds/` | Optical model, GDS writer/reader and closed-loop compiler |
 | `presets/` | Layer stack definitions |
 | `webgui/`, `run_web.py` | Web GUI and local server |
+| `docs/` | Web GUI guide, compiler reference and images |
 | `data/` | Optical material data and its sources |
 | `samples/` | Sample input images |
 | `runs/<stack>_<sample>/` | Stored case studies |
-| `results/`, `run.py`, `optics.py`, … | Earlier SKY130 optical exploration (see [research notes](docs/RESEARCH_NOTES.md)). Its assumptions differ from the current presets |
-| `test_*.py` | Tests |
+| `research/` | Earlier SKY130 optical exploration (see [research notes](research/README.md)). Its assumptions differ from the current presets |
+| `scripts/` | Case report, DRC and maintenance helpers |
+| `tests/` | Tests |
 | `pyproject.toml`, `uv.lock` | Dependencies, managed with uv |
 
 ## Acknowledgments

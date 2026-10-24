@@ -8,8 +8,8 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
 import colour,gdstk
-from optics import ROOT,WL,color,planar_reflectance
-R=ROOT/'results'
+from color2gds.optics import ROOT,WL,color,planar_reflectance
+R=ROOT/'research/results'
 P=json.loads((R/('palette_refined.json' if (R/'palette_refined.json').exists() else 'palette.json')).read_text()); cells=P['cells']
 WL=np.array(P['wavelength_nm'])
 F=['m1_grating','m2_grating','m2_m1_mirror']

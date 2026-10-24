@@ -27,7 +27,7 @@ To add or upgrade a dependency, use `uv add <package>` (or `uv add --dev <packag
 ## Pull requests
 
 - Keep each pull request focused on one change and describe why it is needed.
-- Add or update tests in `test_*.py` when you change behavior.
+- Add or update tests in `tests/` when you change behavior.
 - Make sure `pytest` passes before you submit.
 - Follow the style of the surrounding code.
 - Do not commit generated outputs (`runs/web/`, `.cache/`) or large binaries unless they are intentional sample data.

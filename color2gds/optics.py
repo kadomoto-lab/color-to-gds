@@ -7,7 +7,7 @@ from functools import lru_cache
 import numpy as np
 import yaml, grcwa, colour
 from grcwa.rcwa import MakeKPMatrix, SolveLayerEigensystem
-ROOT=Path(__file__).resolve().parent
+ROOT=Path(__file__).resolve().parents[1]
 WL=np.arange(380.,781.,5.)
 D65=colour.SDS_ILLUMINANTS['D65'].copy().align(colour.SpectralShape(380,780,5)).values
 CMF=colour.MSDS_CMFS['CIE 1931 2 Degree Standard Observer'].copy().align(colour.SpectralShape(380,780,5)).values

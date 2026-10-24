@@ -6,7 +6,7 @@ import numpy as np
 import yaml
 import grcwa
 from grcwa.rcwa import MakeKPMatrix, SolveLayerEigensystem
-from optics import eps as literature_eps, color, ROOT
+from .optics import eps as literature_eps, color, ROOT
 
 BUILTINS = {'air', 'Al', 'Si', 'TiN', 'SiO2', 'Si3N4'}
 

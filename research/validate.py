@@ -4,8 +4,8 @@ os.environ['OPENBLAS_NUM_THREADS']='1'
 import json
 import numpy as np
 import colour
-from optics import ROOT,WL,spectrum,color
-p=json.loads((ROOT/'results/palette.json').read_text())
+from color2gds.optics import ROOT,WL,spectrum,color
+p=json.loads((ROOT/'research/results/palette.json').read_text())
 out=[]
 for family in ['m1_grating','m2_grating','m2_m1_mirror']:
     subset=[c for c in p['cells'] if c['family']==family]
@@ -22,6 +22,6 @@ for family in ['m1_grating','m2_grating','m2_m1_mirror']:
     wide=next(c for c in subset if c['pitch']==.8 and c['width']==.14)
     hi=spectrum(.8,.14,family,modes=71)[:,:,0].mean(axis=1)
     out.append(dict(id=wide['id'],check='large pitch 31 vs 71 modes',deltaE00=float(colour.delta_E(color(hi)['Lab'],wide['Lab'],method='CIE 2000')),max_R0_difference=float(max(abs(hi-wide['R0'])))))
-    (ROOT/'results/extra_validation.json').write_text(json.dumps(out,indent=2))
+    (ROOT/'research/results/extra_validation.json').write_text(json.dumps(out,indent=2))
     print(family,out[-2]['deltaE00'],out[-1]['deltaE00'],flush=True)
 

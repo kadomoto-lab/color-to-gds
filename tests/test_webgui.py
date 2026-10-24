@@ -94,7 +94,7 @@ def test_preset_discovery(client, tmp_path, monkeypatch):
 def test_saved_palette_preview_and_download(client, tmp_path, monkeypatch):
     import shutil
     import numpy as np
-    from optics import color
+    from color2gds.optics import color
     source = server.SAMPLES['soi_al_zundamon']
     manifest = json.loads((source / 'manifest.json').read_text())
     calibration = f"calibration_{manifest['optimization_history'][-1]['round']}.gds"
@@ -119,7 +119,7 @@ def test_saved_palette_preview_and_download(client, tmp_path, monkeypatch):
 @pytest.mark.parametrize('sample', sorted(server.SAMPLES))
 def test_palette_spectra_match_saved_data(client, sample):
     import numpy as np
-    from optics import color
+    from color2gds.optics import color
     response = client.get(f'/api/jobs/sample-{sample}/palette')
     assert response.status_code == 200, response.text
     palette = response.json()

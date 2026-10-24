@@ -9,7 +9,7 @@
 以前のスクリプトと同様の3つの位置引数に、積層構造を追加した形式です。
 
 ```bash
-uv run python compile_image.py samples/zundamon.png 0.14 68 \
+uv run python -m scripts.compile_image samples/zundamon.png 0.14 68 \
   --stack presets/sky130.yaml --out runs/my_sky130
 ```
 
@@ -103,7 +103,7 @@ GDSのグリッド・線幅・間隔・最小面積・画素境界間隔は検�
 OPENBLAS_NUM_THREADS=1 uv run pytest -q
 ```
 
-光学・PDKの出典は各YAML、`data/*.yml`、[研究ノート](docs/RESEARCH_NOTES.md)を参照してください。
+光学・PDKの出典は各YAML、`data/*.yml`、[研究ノート](../research/README.md)を参照してください。
 ## 同梱サンプルでの検証結果
 
 同梱の2画像（ずんだもん・四国めたん）を幅1000.32 µm、横128画素で、SKY130とSOI＋Alの両積層について実行しました。元画像との平均ΔE00は、ずんだもんがSKY130で17.72、SOI＋Alで16.26、四国めたんがSKY130で17.57、SOI＋Alで14.40です。最終GDS読み戻しによる予測の差は全ケースで0でした。
@@ -111,5 +111,5 @@ OPENBLAS_NUM_THREADS=1 uv run pytest -q
 各ケースの使用頻度上位2セルずつを次数51および波長刻み0.5 nmで再計算したとき、基準計算からの変動は最大ΔE00 0.311でした。SKY130の2ケースはMagic 8.3.678のdrc(full)でエラーカテゴリ0件でした（密度・アンテナ・製造サインオフを含みません）。検証記録は各ケースのnumerical_checks.jsonとmagic_drc.txtにあります。
 
 ```bash
-uv run python check_compiler_drc.py runs/sky130_zundamon --magic "$(command -v magic)" --pdk-root "$HOME/.volare"
+uv run python -m scripts.check_compiler_drc runs/sky130_zundamon --magic "$(command -v magic)" --pdk-root "$HOME/.volare"
 ```

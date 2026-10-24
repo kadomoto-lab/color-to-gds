@@ -6,7 +6,7 @@ import argparse,json,time,platform
 from pathlib import Path
 from concurrent.futures import ProcessPoolExecutor
 import numpy as np
-from optics import WL,spectrum,color,ROOT
+from color2gds.optics import WL,spectrum,color,ROOT
 FAMILIES=['m1_grating','m2_grating','m2_m1_mirror']
 def candidates():
     out=[]
@@ -28,7 +28,7 @@ def job(args):
 def main():
     p=argparse.ArgumentParser(); p.add_argument('--modes',type=int,default=31); p.add_argument('--workers',type=int,default=4)
     p.add_argument('--limit',type=int); p.add_argument('--study',action='store_true'); args=p.parse_args()
-    dest=ROOT/'results'; dest.mkdir(exist_ok=True); t=time.time()
+    dest=ROOT/'research/results'; dest.mkdir(exist_ok=True); t=time.time()
     if not args.study:
         cells=candidates()[:args.limit]; out=[]
         with ProcessPoolExecutor(max_workers=args.workers) as pool:

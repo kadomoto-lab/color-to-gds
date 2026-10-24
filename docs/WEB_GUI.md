@@ -6,14 +6,14 @@
 
 ## 起動
 
-リポジトリをcloneし、[README](README.ja.md)の手順で仮想環境を作成した後、リポジトリルートで実行します。
+リポジトリをcloneし、[README](../README.ja.md)の手順で仮想環境を作成した後、リポジトリルートで実行します。
 
 ```bash
 uv sync
 uv run run_web.py
 ```
 
-Windowsのブラウザで http://localhost:8765 を開きます。別のポートを使う場合は `--port 8766` を指定してください。サーバーは127.0.0.1にのみバインドします。Windowsからの起動用に `Start-Color2GDS.ps1` も用意しています。UNC上のスクリプト実行を制限するWindows環境では、Windows側のローカルフォルダにコピーして実行してください。起動スクリプトは既定でWSLユーザーの `~/color-to-gds` を起動します。別の場所やディストリビューションでは `-RepositoryPath` と `-Distribution` を指定してください。
+Windowsのブラウザで http://localhost:8765 を開きます。別のポートを使う場合は `--port 8766` を指定してください。サーバーは127.0.0.1にのみバインドします。Windowsからの起動用に `scripts/Start-Color2GDS.ps1` も用意しています。UNC上のスクリプト実行を制限するWindows環境では、Windows側のローカルフォルダにコピーして実行してください。起動スクリプトは既定でWSLユーザーの `~/color-to-gds` を起動します。別の場所やディストリビューションでは `-RepositoryPath` と `-Distribution` を指定してください。
 
 ## 操作
 

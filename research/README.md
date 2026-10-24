@@ -8,16 +8,16 @@ Python 3.10、CPU。初回取得済みの材料データは data/ に保存し�
 
     uv sync
     OPENBLAS_NUM_THREADS=1 uv run pytest -q
-    uv run python run.py --workers 4
-    uv run python run.py --study
-    uv run python validate.py
-    uv run python refine.py
-    uv run python validate_half_nm.py
-    uv run python report.py
+    uv run python -m research.run --workers 4
+    uv run python -m research.run --study
+    uv run python -m research.validate
+    uv run python -m research.refine
+    uv run python -m research.validate_half_nm
+    uv run python -m research.report
 
-results/report.html は外部依存のない単体HTMLです。ブラウザで開くと、セル選択で TE/TM・正反射・全反射スペクトルを比較できます。
+research/results/report.html は外部依存のない単体HTMLです。ブラウザで開くと、セル選択で TE/TM・正反射・全反射スペクトルを比較できます。
 
-run.py は全138セルで約46秒、代表構造の感度解析は約3分（今回の実行環境）。--modes 51 等で次数を増やせます。--limit はスモーク実行用で palette.json を上書きするため、完全計算後の結果保持に注意してください。--study は全スイープ完了後に実行してください。
+research/run.py は全138セルで約46秒、代表構造の感度解析は約3分（今回の実行環境）。--modes 51 等で次数を増やせます。--limit はスモーク実行用で palette.json を上書きするため、完全計算後の結果保持に注意してください。--study は全スイープ完了後に実行してください。
 
 ## 計算した範囲
 
@@ -69,19 +69,19 @@ grcwa 0.1.2の散乱行列・固有モード計算を使用。矩形格子のフ
 5. Liの逆則がTEの結果を変更しないこと。
 6. 完全充填格子と独立Fresnel多層膜解との一致。
 
-代表3セルでは31対71次数の色差ΔE00が約0.025–0.030でした。これは全138セルの収束保証ではありません。追加検証は results/extra_validation.json、代表収束・感度は results/summary.json に保存。
+代表3セルでは31対71次数の色差ΔE00が約0.025–0.030でした。これは全138セルの収束保証ではありません。追加検証は research/results/extra_validation.json、代表収束・感度は research/results/summary.json に保存。
 
 5 nmと1 nmの波長積分に代表セルでΔE00最大約1.09の差があったため、全138セルを1 nmで再計算しました。HTML、パレット図、CSVはこの精細版を使用します。感度・次数比較は5 nmスクリーニング値として区別します。extra_validation.jsonの細かい波長データは380–780 nm、1 nm刻み、51モードです。
 
 ## 初期結果の解釈
 
-今回の138候補は、ピンク・薄緑・黄・紫などの淡い色を示すものの、sRGB全域を覆う鮮やかなフルカラーには到達していません。5 nm探索段階では最大Lab彩度 C*ab は約30.77、Yは約0.239–0.746（モデル内）。精細計算の最終値はresults/summary.jsonを参照。
+今回の138候補は、ピンク・薄緑・黄・紫などの淡い色を示すものの、sRGB全域を覆う鮮やかなフルカラーには到達していません。5 nm探索段階では最大Lab彩度 C*ab は約30.77、Yは約0.239–0.746（モデル内）。精細計算の最終値はresearch/results/summary.jsonを参照。
 
 平坦M1反射板の色はほぼ白であり、周期パターンによるスペクトル変化を確認できます。ただし、回折・吸収・薄膜干渉・共振の寄与の分離はまだ行っていません。角度で大きい色差が出る例があり、次段階では実際の照明NAと集光NAを指定する必要があります。
 
 ## GDSの位置づけ
 
-results/color_coupon_research.gds には138種類を10 umピッチで配置、各8 um枠、Met1=68/20、Met2=69/20。1 nmDBU、座標5 nmグリッド。セル番号と光学LUTの対応はgds_manifest.json。
+research/results/color_coupon_research.gds には138種類を10 umピッチで配置、各8 um枠、Met1=68/20、Met2=69/20。1 nmDBU、座標5 nmグリッド。セル番号と光学LUTの対応はgds_manifest.json。
 
 **研究用の形状サンプル。製造用のDRC-clean GDSではありません。** 線幅・周期内間隔・グリッドのみを候補生成/読戻しで確認しています。M1連続反射板は7.44 um角なので最大幅/スロット規則の検討が必須です。密度・フィル・スロット・ウェハ全体・チップ境界・アンテナ・LVS等の全PDK検証は未実施。スロットを追加すると光学構造も変わり、再計算が必要です。
 
@@ -89,16 +89,16 @@ results/color_coupon_research.gds には138種類を10 umピッチで配置、�
 
 ## ファイル
 
-- optics.py は材料、積層、RCWA、色変換、平坦膜対照。
-- run.py は138候補のスイープ、代表構造の感度解析。
-- refine.py は全138候補を1 nm刻みで再計算。
-- validate.py / test_optics.py は数値検証。
-- report.py はPNG図、CSV、HTML、研究用GDS。
+- color2gds/optics.py は材料、積層、RCWA、色変換、平坦膜対照。
+- research/run.py は138候補のスイープ、代表構造の感度解析。
+- research/refine.py は全138候補を1 nm刻みで再計算。
+- research/validate.py / tests/test_optics.py は数値検証。
+- research/report.py はPNG図、CSV、HTML、研究用GDS。
 - data/ は材料表、取得URLとSHA256。
-- results/palette.json は5 nm探索LUT、palette_refined.json は1 nm最終LUT、palette.csv / spectra.csv は最終LUTのCSV。
-- results/studies.json, extra_validation.json, summary.json は追加計算。
-- results/*.png は共有用の科学図。
-- bootstrap.py は材料表の取得と元資料の確認用。同梱済みデータの再取得用で、通常の再計算には不要。
+- research/results/palette.json は5 nm探索LUT、palette_refined.json は1 nm最終LUT、palette.csv / spectra.csv は最終LUTのCSV。
+- research/results/studies.json, extra_validation.json, summary.json は追加計算。
+- research/results/*.png は共有用の科学図。
+- scripts/bootstrap.py は材料表の取得と元資料の確認用。同梱済みデータの再取得用で、通常の再計算には不要。
 
 ## 一次資料
 
@@ -120,7 +120,7 @@ results/color_coupon_research.gds には138種類を10 umピッチで配置、�
 
 1 nm精細版は全138セル、401波長、2偏光。最大C*ab=28.7316、Y=0.2454–0.7441。
 5 nm探索からの最大色差はΔE00=9.6998で、一部の鋭いスペクトル構造を粗い刻みでは正しく積分できませんでした。
-変化の大きい上位6セルを0.5 nmでも計算し、1 nmとの差はΔE00=0.0478–0.5508でした（results/half_nm_validation.json）。
+変化の大きい上位6セルを0.5 nmでも計算し、1 nmとの差はΔE00=0.0478–0.5508でした（research/results/half_nm_validation.json）。
 全候補の波長収束保証ではありません。最終パレットは1 nm版、感度解析は5 nmの探索値として参照してください。
 
 6つの光学単体テスト合格。全セルの受動性を確認。GDSの139セル/138参照と5 nmグリッドを読み戻し確認。

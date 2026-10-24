@@ -34,3 +34,7 @@ dev = [
 [tool.uv]
 # An application run from the repository root, not an installable package.
 package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

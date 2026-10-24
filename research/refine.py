@@ -5,7 +5,7 @@ os.environ['OMP_NUM_THREADS']='1'
 import json,time
 from concurrent.futures import ProcessPoolExecutor
 import numpy as np,colour
-from optics import ROOT,spectrum
+from color2gds.optics import ROOT,spectrum
 FINE=np.arange(380.,781.,1.)
 shape=colour.SpectralShape(380,780,1)
 CMF=colour.MSDS_CMFS['CIE 1931 2 Degree Standard Observer'].copy().align(shape).values
@@ -22,11 +22,11 @@ def job(c):
         T=a[:,:,2].mean(axis=1).tolist(),min_absorption_above_substrate=float((1-a[:,:,1]-a[:,:,2]).min()),
         deltaE00_vs_5nm=float(colour.delta_E(c['Lab'],lab,method='CIE 2000')))
 if __name__=='__main__':
-    cells=json.loads((ROOT/'results/palette.json').read_text())['cells'];out=[];t=time.time()
+    cells=json.loads((ROOT/'research/results/palette.json').read_text())['cells'];out=[];t=time.time()
     with ProcessPoolExecutor(max_workers=4) as pool:
         for i,c in enumerate(pool.map(job,cells)):
             out.append(c)
             if i%10==0:print(f'{i+1}/{len(cells)} {time.time()-t:.1f}s',flush=True)
-    (ROOT/'results/palette_refined.json').write_text(json.dumps(dict(wavelength_nm=FINE.tolist(),modes=31,cells=out),indent=2))
+    (ROOT/'research/results/palette_refined.json').write_text(json.dumps(dict(wavelength_nm=FINE.tolist(),modes=31,cells=out),indent=2))
     print('done',len(out),'max dE',max(c['deltaE00_vs_5nm'] for c in out),flush=True)
 

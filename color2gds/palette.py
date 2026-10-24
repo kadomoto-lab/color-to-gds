@@ -7,7 +7,7 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
 from .layout import read_gds
-from optics import color
+from .optics import color
 
 
 def _load_palette(directory):

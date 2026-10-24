@@ -1,5 +1,5 @@
 import numpy as np
-from optics import solve,eps,color,WL,planar_reflectance
+from color2gds.optics import solve,eps,color,WL,planar_reflectance
 def test_white_black():
     c=color(np.ones_like(WL)); assert abs(c['XYZ'][1]-1)<1e-10
     assert np.max(np.abs(np.array(c['rgb'])-1))<.002
@@ -27,7 +27,7 @@ def test_li_does_not_change_te():
 
 
 def test_full_grating_against_uniform_film_reference():
-    from optics import layers
+    from color2gds.optics import layers
     for w in [413,567,711]:
         st=layers('m2_m1_mirror')
         ns=[1+0j if m=='air' else np.sqrt(eps('Al' if m=='pattern' else m,w)+0j) for m,d in st]

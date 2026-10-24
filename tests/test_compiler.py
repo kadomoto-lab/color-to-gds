@@ -6,7 +6,7 @@ import gdstk
 from color2gds.model import load_stack,epsilon,one_wavelength
 from color2gds.layout import candidates,write_gds,read_gds
 
-ROOT=Path(__file__).parent
+ROOT=Path(__file__).resolve().parents[1]
 
 @pytest.mark.parametrize('preset',['sky130','soi_al'])
 def test_homogeneous_limit_against_fresnel(preset):

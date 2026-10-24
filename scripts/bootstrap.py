@@ -5,7 +5,7 @@ metal_stack.svg from a local checkout of https://github.com/google/skywater-pdk.
 """
 from pathlib import Path
 import argparse, urllib.request, hashlib, json, shutil
-root=Path(__file__).resolve().parent
+root=Path(__file__).resolve().parents[1]
 parser=argparse.ArgumentParser(description=__doc__.splitlines()[0])
 parser.add_argument('--skywater-pdk',type=Path,help='local skywater-pdk checkout')
 args=parser.parse_args()

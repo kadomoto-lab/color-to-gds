@@ -8,7 +8,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
-ROOT=Path(__file__).parent;RUNS=ROOT/'runs'
+ROOT=Path(__file__).resolve().parents[1];RUNS=ROOT/'runs'
 SAMPLES={'zundamon':'Zundamon','metan':'Shikoku Metan'}
 STACKS={'sky130':'SKY130 Met1 — assumed optical stack','soi_al':'SOI + Al — 100 / 220 / 2000 nm'}
 CASES=[f'{stack}_{sample}' for sample in SAMPLES for stack in STACKS]
@@ -41,7 +41,7 @@ for name in CASES:
     page+='<tr><td>'+html.escape(label(name))+'</td><td><a href="'+name+'/image.gds">image.gds</a></td><td>'+f"{s['mean_deltaE00_source']:.2f}"+'</td><td>'+check+'</td></tr>'
 page+='</table><p>ΔE00 is the color difference from the input RGB image. The Magic check excludes density and antenna rules and is not a manufacturing sign-off.</p>'
 if checks:page+=f'<p>For the two most-used cells of each case, we reran with 51 instead of 31 modes and a 0.5 nm instead of 1 nm step. The predicted color changed by at most ΔE00 = {max(checks):.3f}. This is not a convergence guarantee for every cell; see numerical_checks.json in each folder.</p>'
-page+='</section><section><h2>GDS and simulation outputs</h2><p>'+' / '.join(f'<a href="{name}/report.html">{html.escape(label(name))}</a>' for name in CASES)+''' / <a href="COMPILER.md">Compiler reference (Japanese)</a></p>
+page+='</section><section><h2>GDS and simulation outputs</h2><p>'+' / '.join(f'<a href="{name}/report.html">{html.escape(label(name))}</a>' for name in CASES)+''' / <a href="../docs/COMPILER.md">Compiler reference (Japanese)</a></p>
 <p>Each folder holds the full output: image.gds, image.bmp, appearance.png, appearance.npz, manifest.json and summary.json. The NPZ stores per-cell reflection spectra and the pixel-to-cell mapping.</p></section>
 <section><h2>Compare the metal patterns</h2><select id="case">'''+''.join(f'<option value="{i}">{html.escape(label(name))}</option>' for i,name in enumerate(CASES))+'''</select><p>Close-up of the polygons read back from the GDS.</p><img id="detail"></section>
 <section><h2>What the closed loop covers</h2><p>The candidate-cell GDS is read back to compute the palette, and the image is mapped onto it. Line widths of frequently used candidates are searched ±1 grid step, then the final GDS is read back and recomputed to match the prediction made during optimization. This checks consistency within one forward model; it is not a calibration against measurements.</p>

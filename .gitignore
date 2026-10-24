@@ -20,7 +20,6 @@ htmlcov/
 # Local calculation outputs (web jobs, CLI runs, palette exports, etc.).
 # Keep the bundled case studies required by the GUI/tests and their reports.
 /runs/*
-!/runs/COMPILER.md
 !/runs/index.html
 !/runs/case_comparison.png
 !/runs/case_metadata.json
@@ -39,7 +38,7 @@ htmlcov/
 !/runs/verification_latest/*.py
 !/runs/verification_latest/*.md
 
-# results/ is the versioned historical research snapshot described in README.md.
+# research/results/ is the versioned historical research snapshot described in research/README.md.
 # Do not exclude data formats globally: NPZ/GDS/PNG/CSV/JSON are also sample assets.
 
 # Local environment settings (templates can be shared)
@@ -61,5 +60,5 @@ core.[0-9]*
 /finalize.py
 /finish_report.py
 
-# Optional SkyWater PDK figure copied by bootstrap.py (Apache-2.0, not redistributed here)
+# Optional SkyWater PDK figure copied by scripts/bootstrap.py (Apache-2.0, not redistributed here)
 /data/sky130_stack.svg

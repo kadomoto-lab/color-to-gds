@@ -62,7 +62,7 @@ uv run run_web.py
 
 材料データとフォントはリポジトリに同梱しています。初回起動時には、固定版の[kwasm](https://pypi.org/project/kwasm/0.2.26/)ビューアを取得し、SHA-256を検証します。以後、画像・GDS・光学計算はローカルで処理します。
 
-Windowsからは [`Start-Color2GDS.ps1`](Start-Color2GDS.ps1) でWSL上のサーバーを起動できます。cloneした場所が `~/color-to-gds` 以外の場合は `-RepositoryPath` を指定してください。
+Windowsからは [`scripts/Start-Color2GDS.ps1`](scripts/Start-Color2GDS.ps1) でWSL上のサーバーを起動できます。cloneした場所が `~/color-to-gds` 以外の場合は `-RepositoryPath` を指定してください。
 
 ### Web GUIの使い方
 
@@ -76,7 +76,7 @@ Windowsからは [`Start-Color2GDS.ps1`](Start-Color2GDS.ps1) でWSL上のサー
 
 画面は英語が標準です。右上の **日本語** ボタンで日本語表示に切り替えられます（**English** で英語に戻ります）。選んだ言語はブラウザに保存されます。
 
-初期設定は横128画素、画素サイズ7.815 µmで、幅は約1 mmです。結果の保存先は `runs/web/<job-id>/output/` です。入力画像は16 MB・1600万画素までです。実行上限やビューアの詳細は [Web GUIガイド](WEB_GUI.md) を参照してください。
+初期設定は横128画素、画素サイズ7.815 µmで、幅は約1 mmです。結果の保存先は `runs/web/<job-id>/output/` です。入力画像は16 MB・1600万画素までです。実行上限やビューアの詳細は [Web GUIガイド](docs/WEB_GUI.md) を参照してください。
 
 ## コマンドラインで使う
 
@@ -96,7 +96,7 @@ uv run python -m color2gds simulate runs/my_soi/image.gds \
   --manifest runs/my_soi/manifest.json --out runs/my_soi_resim
 ```
 
-全引数、積層スキーマ、NPZの読み方は [コンパイラ仕様](COMPILER.md) を参照してください。
+全引数、積層スキーマ、NPZの読み方は [コンパイラ仕様](docs/COMPILER.md) を参照してください。
 
 ## 出力
 
@@ -137,11 +137,13 @@ uv run python -m color2gds simulate runs/my_soi/image.gds \
 | `color2gds/` | 光学モデル、GDS生成・読込、閉ループコンパイラ |
 | `presets/` | 積層定義 |
 | `webgui/` / `run_web.py` | Web GUIとローカルサーバー |
+| `docs/` | Web GUIガイド、コンパイラ仕様、画像 |
 | `data/` | 光学材料データと出典 |
 | `samples/` | サンプル入力画像 |
 | `runs/<積層>_<サンプル>/` | 保存済みケーススタディ |
-| `results/` / `run.py` / `optics.py` など | 初期のSKY130光学探索（[研究ノート](docs/RESEARCH_NOTES.md)参照）。現行プリセットとは仮定が異なります |
-| `test_*.py` | テスト |
+| `research/` | 初期のSKY130光学探索（[研究ノート](research/README.md)参照）。現行プリセットとは仮定が異なります |
+| `scripts/` | ケースレポート、DRC、保守用の補助スクリプト |
+| `tests/` | テスト |
 | `pyproject.toml` / `uv.lock` | uvで管理する依存関係 |
 
 ## 謝辞
